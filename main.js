@@ -2,6 +2,8 @@ const path = require('path');
 
 const { app, BrowserWindow } = require("electron");
 
+app.commandLine.appendSwitch('enable-features', 'OverlayScrollbar')
+
 try {
   require('electron-reloader')(module);
 } catch (_) {}
@@ -24,7 +26,7 @@ if (!gotTheLock) {
 let mainWindow;
 
 function createWindow() {
-  const win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 470,
     height: 617,
     x: 1950,
@@ -41,15 +43,14 @@ function createWindow() {
     }
   });
 
-  win.loadFile(path.join(__dirname, 'mainPage', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'mainPage', 'index.html'));
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.setVisualZoomLevelLimits(1, 1);
+  });
 }
 
 app.whenReady().then(createWindow);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
-});
-
-win.webContents.on('did-finish-load', () => {
-  win.webContents.setVisualZoomLevelLimits(1, 1);
 });

@@ -16,7 +16,9 @@ body {
     height: 100vh;
     background-color: rgb(251, 218, 245);
     border-radius: 30px;
-    overflow: hidden;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -26,6 +28,8 @@ body::-webkit-scrollbar {
 /** CSS CODE **/
 
 .controlDiv {
+    -webkit-app-region: drag;
+    cursor: grab;
     background-color: rgb(136, 31, 124);
 
     display: flex;
@@ -75,11 +79,44 @@ body::-webkit-scrollbar {
     margin-right: 20px;
     margin-bottom: 0;
     line-height: 1;
+    
+    cursor: grab;
 }
 
-.mainTitle {
-    font-family: "Darumadrop One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 45px;
+.globalheaderDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0px 30px;
+    margin-top: -25px;
+}
+
+.globalButtons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.globalButtons img {
+    background-color: rgb(246, 159, 232);
+    box-shadow: 0px 0px 4px rgb(52, 8, 74, 0.35);
+
+    border-radius: 130px;
+}
+
+.listButton {
+    padding: 5px;
+}
+
+.userButton {
+    padding: 10px;
+}
+
+.controlButtons, .globalButtons, .activelistSection, .viewList {
+  -webkit-app-region: no-drag;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }

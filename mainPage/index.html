@@ -21,35 +21,50 @@
         <h2 class="controlTitle">futureGoal</h2>
     </div>
 
-        <header>
-            <div>
+        <header class="globalHeader">
+            <div class="globalheaderDiv">
                 <h1 class="mainTitle">futureGoal</h1>
 
-                <a href="../listsPage/lists.html"><img src="images/listButton.png" alt=""></a>
-                <a href="../userSettings/user.html"><img src="images/userButton.png" alt=""></a>
+                <div class="globalButtons">
+                    <a href="../listsPage/lists.html"><img src="images/listImg.png" alt="" width="47px" class="listButton"></a>
+                    <a href="../userSettings/user.html"><img src="images/userImg.png" alt="" width="35px" height="35px" class="userButton"></a>
+                </div>
             </div>
         </header>
 
-        <p><a href="">View your lists</a></p>
-        <h3>Welcome back, {user}.</h3>
+        <p class="viewList"><a href="">View your lists</a></p>
+        <h3 class="welcomeTitle">Welcome back, {user}.</h3>
 
-        <section>
+        <section class="activelistSection">
 
-            <div>
-                <h3>List #1</h3>
-                <ul>
-                    <li>item one</li>
-                    <li>item two</li>
-                    <li>item three</li>
-                </ul>
-            </div>
-            <div>
-                <h3>List #2</h3>
-                <ul>
-                    <li>item one</li>
-                    <li>item two</li>
-                    <li>item three</li>
-                </ul>
+            <div class="listCards">
+                <div class="listCard">
+                    <h3 class="listTitle">List #1</h3>
+                    <ul class="listGroup">
+                        <li>
+                            <input type="checkbox" name="" id=""> item 1
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""> item 2
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""> item 3
+                    </ul>
+                </div>
+                <div class="listCard">
+                    <h3 class="listTitle">List #2</h3>
+                    <ul class="listGroup">
+                        <li>
+                            <input type="checkbox" name="" id=""> item 1
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""> item 2
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id=""> item 3
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </section>
