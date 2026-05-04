@@ -33,10 +33,11 @@ function createWindow() {
     maximizable: false,
     fullscreenable: false,
     frame: false, 
-    transparent: false,
+    transparent: true,
     webPreferences: {
       contextIsolation: true,
-      nodeIntegration: true
+      nodeIntegration: true,
+      zoomFactor: 1.0
     }
   });
 
@@ -47,4 +48,8 @@ app.whenReady().then(createWindow);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
+});
+
+win.webContents.on('did-finish-load', () => {
+  win.webContents.setVisualZoomLevelLimits(1, 1);
 });

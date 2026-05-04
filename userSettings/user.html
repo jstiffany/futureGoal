@@ -9,55 +9,59 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
+    <div class="container">
 
-    <div>
-        <img src="images/X.png" alt="">
-        <img src="images/O.png" alt="">
-        <img src="images/-.png" alt="">
+        <div class="controlDiv">
+            <div class="controlButtons">
+                <a href="">X</a>
+                <a href="">O</a>
+                <a href="" class="minimize">-</a>
+            </div>
 
-        <h2>futureGoal</h2>
+            <h2 class="controlTitle">futureGoal</h2>
+        </div>
+
+        <header>
+            <div>
+                <h1 class="mainTitle">user settings</h1>
+
+                <a href="../listsPage/lists.html"><img src="images/listButton.png" alt=""></a>
+                <a href="user.html"><img src="images/userButtonA.png" alt=""></a>
+            </div>
+        </header>
+
+        <section>
+
+            <div>
+                <img src="images/profilePic.png" alt="">
+
+                <div>
+                    <div id="email_Holder" class="input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div id="username_Holder" class="input">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+
+                    <div id="password_Holder" class="input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="********" required>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>DANGER ZONE</h3>
+                    <span>Delete account</span>
+                    <p>*note that this action is IRREVERSABLE and CANNOT be undone.*</p>
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
-
-    <header>
-        <div>
-            <h1>user settings</h1>
-
-            <a href="../listsPage/lists.html"><img src="images/listButton.png" alt=""></a>
-            <a href="user.html"><img src="images/userButtonA.png" alt=""></a>
-        </div>
-    </header>
-
-    <section>
-
-        <div>
-            <img src="images/profilePic.png" alt="">
-
-            <div>
-                <div id="email_Holder" class="input">
-                    <label for="email">email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-
-                <div id="username_Holder" class="input">
-                    <label for="username">username</label>
-                    <input type="text" name="username" id="username" required>
-                </div>
-
-                <div id="password_Holder" class="input">
-                    <label for="password">password</label>
-                    <input type="password" name="password" id="password" placeholder="********" required>
-                </div>
-            </div>
-
-            <div>
-                <h3>DANGER ZONE</h3>
-                <span>Delete account</span>
-                <p>*note that this action is IRREVERSABLE and CANNOT be undone.*</p>
-            </div>
-
-        </div>
-
-    </section>
-    
 </body>
 </html>

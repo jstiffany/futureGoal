@@ -6,7 +6,17 @@ body {
     padding: 0;
     margin: 0;
 
+    background: transparent;
+
+    border-radius: 20px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(251, 218, 245);
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,3 +25,61 @@ body::-webkit-scrollbar {
 
 /** CSS CODE **/
 
+.controlDiv {
+    background-color: rgb(136, 31, 124);
+
+    display: flex;
+    align-items: center;
+
+    margin-top: -20px;
+    margin-bottom: -20px;
+    width: 100%;
+
+    padding-bottom: 15px;
+}
+
+.controlButtons {
+    display: flex;
+    flex-direction: row;
+
+    gap: 15px;
+
+    margin-top: 35px;
+    margin-left: 20px;
+
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.controlButtons a {
+    display: flex;
+    flex-direction: row;
+
+    text-decoration: none;
+
+    color: rgb(36, 3, 32);
+}
+
+.controlTitle {
+    color: rgb(36, 3, 32);
+
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.mainTitle {
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+}
