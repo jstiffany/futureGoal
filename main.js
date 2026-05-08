@@ -12,10 +12,10 @@ const additionalData = { myKey: 'futureGoal' }
 const gotTheLock = app.requestSingleInstanceLock(additionalData)
 
 if (!gotTheLock) {
-  app.quit() // If a second one tries to start, kill it immediately
+  app.quit()
 } else {
   app.on('second-instance', (event, commandLine, workingDirectory, additionalData) => {
-    // If someone tries to run a second instance, focus on the main window instead
+
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore()
       mainWindow.focus()
